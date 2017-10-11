@@ -70,12 +70,14 @@
 (global-set-key (kbd "M-J") 'scroll-up-command)
 (global-set-key (kbd "M-K") 'scroll-down-command)
 (global-set-key (kbd "M-L") 'move-end-of-line)
+(global-set-key (kbd "M-SPC") 'set-mark-command)
 ;; files
 (global-set-key (kbd "M-x") 'kill-region)              ; execute-extended-command
 (global-set-key (kbd "M-c") 'kill-ring-save)           ; capitalize-word
 (global-set-key (kbd "M-v") 'yank)                     ; scroll-down-command
 ;; commands
-(global-set-key (kbd "M-a") 'execute-extended-command) ; backward-sentence
+(global-set-key (kbd "M-a") 'smex)                     ; backward-sentence
+(global-set-key (kbd "M-A") 'smex-major-mode-commands)
 
 
 ;;; user hooks
