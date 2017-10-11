@@ -61,6 +61,7 @@
 
 
 ;;; user keybindings                                     old
+;; navigation
 (global-set-key (kbd "M-h") 'backward-char)            ; mark-paragraph
 (global-set-key (kbd "M-j") 'next-line)                ; indent-new-
 (global-set-key (kbd "M-k") 'previous-line)            ; kill-sentence
@@ -69,6 +70,12 @@
 (global-set-key (kbd "M-J") 'scroll-up-command)
 (global-set-key (kbd "M-K") 'scroll-down-command)
 (global-set-key (kbd "M-L") 'move-end-of-line)
+;; files
+(global-set-key (kbd "M-x") 'kill-region)              ; execute-extended-command
+(global-set-key (kbd "M-c") 'kill-ring-save)           ; capitalize-word
+(global-set-key (kbd "M-v") 'yank)                     ; scroll-down-command
+;; commands
+(global-set-key (kbd "M-a") 'execute-extended-command) ; backward-sentence
 
 
 ;;; user hooks
