@@ -60,31 +60,43 @@
      ))
 
 
-;;; user keybindings                                     old
+;;; user keybindings                                       old
 ;; navigation
-(global-set-key (kbd "M-h") 'backward-char)            ; mark-paragraph
-(global-set-key (kbd "M-j") 'next-line)                ; indent-new-
-(global-set-key (kbd "M-k") 'previous-line)            ; kill-sentence
-(global-set-key (kbd "M-l") 'forward-char)             ; downcase-word
+(global-set-key (kbd "M-h") 'backward-char)              ; mark-paragraph
+(global-set-key (kbd "M-j") 'next-line)                  ; indent-new-
+(global-set-key (kbd "M-k") 'previous-line)              ; kill-sentence
+(global-set-key (kbd "M-l") 'forward-char)               ; downcase-word
 (global-set-key (kbd "M-H") 'move-beginning-of-line)
 (global-set-key (kbd "M-J") 'scroll-up-command)
 (global-set-key (kbd "M-K") 'scroll-down-command)
 (global-set-key (kbd "M-L") 'move-end-of-line)
 (global-set-key (kbd "M-SPC") 'set-mark-command)
+(global-set-key (kbd "M-n") 'recenter-top-bottom)
+(global-set-key (kbd "M-o") 'other-window)               ; facemenu-set-*
 ;; files
-(global-set-key (kbd "M-x") 'kill-region)              ; execute-extended-command
-(global-set-key (kbd "M-c") 'kill-ring-save)           ; capitalize-word
-(global-set-key (kbd "M-v") 'yank)                     ; scroll-down-command
+(global-set-key (kbd "M-x") 'kill-region)                ; execute-extended-command
+(global-set-key (kbd "M-c") 'kill-ring-save)             ; capitalize-word
+(global-set-key (kbd "M-v") 'yank)                       ; scroll-down-command
 ;; commands
-(global-set-key (kbd "M-a") 'smex)                     ; backward-sentence
+(global-set-key (kbd "M-a") 'smex)                       ; backward-sentence
 (global-set-key (kbd "M-A") 'smex-major-mode-commands)
+;; facemenu
+(progn
+  (define-prefix-command 'facemenu-map)
+  (define-key facemenu-map (kbd "d") 'facement-set-default)
+  (define-key facemenu-map (kbd "b") 'facemenu-set-bold)
+  (define-key facemenu-map (kbd "i") 'facemenu-set-italic)
+  (define-key facemenu-map (kbd "l") 'facemenu-set-bold-italic)
+  (define-key facemenu-map (kbd "u") 'facemenu-set-underline)
+  (define-key facemenu-map (kbd "f") 'facemenu-set-face))
+(global-set-key (kbd "M-f") facemenu-map)                ; forward-char
 
 
 ;;; user hooks
 ;; ibuffer-mode
 (defun my-ibuffer-mode-config ()
   "for use in `ibuffer-mode-hook'."
-  (local-set-key (kbd "M-j") 'next-line) ; ibuffer-jump-to-filer-group
+  (local-set-key (kbd "M-j") 'next-line) ; ibuffer-jump-to-filter-group
   )
 ;; add hook
 (add-hook 'ibuffer-mode-hook 'my-ibuffer-mode-config)
