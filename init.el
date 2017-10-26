@@ -81,7 +81,7 @@
 (global-set-key (kbd "M-a") 'smex)                       ; backward-sentence
 (global-set-key (kbd "M-A") 'smex-major-mode-commands)
 ;; buffers
-(global-set key (kbd "M-b") 'ibuffer)                    ; backward-word
+(global-set-key (kbd "M-b") 'ibuffer)                    ; backward-word
 ;; facemenu
 (progn
   (define-prefix-command 'facemenu-map)
