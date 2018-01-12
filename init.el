@@ -1,6 +1,7 @@
 ;; packages first
 (require 'package)
 (package-initialize)
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 
 ;; for emacsclient
 (server-start)
@@ -139,13 +140,9 @@
  '(backup-directory-alist (quote ((".*" . "C:/Users/rdcercma/Documents/emacs"))))
  '(column-number-mode t)
  '(custom-enabled-themes (quote (zenburn)))
- '(custom-safe-themes
-   (quote
-    ("71c379d39642d7281407e56123ad7043b9874a1c18b20b6685730a86251a002e" "67e998c3c23fe24ed0fb92b9de75011b92f35d3e89344157ae0d544d50a63a72" default)))
+ '(custom-safe-themes (quote ("2022c5a92bbc261e045ec053aa466705999863f14b84c012a43f55a95bf9feb8" "71c379d39642d7281407e56123ad7043b9874a1c18b20b6685730a86251a002e" "67e998c3c23fe24ed0fb92b9de75011b92f35d3e89344157ae0d544d50a63a72" default)))
  '(line-number-mode t)
- '(package-selected-packages
-   (quote
-    (symon yasnippet ess-R-data-view ess-R-object-popup zenburn-theme auctex better-defaults ergoemacs-mode ess font-utils list-utils pcache persistent-soft smex tangotango-theme ucs-utils undo-tree unicode-fonts)))
+ '(package-selected-packages (quote (symon yasnippet ess-R-data-view ess-R-object-popup zenburn-theme auctex better-defaults ergoemacs-mode ess font-utils list-utils pcache persistent-soft smex tangotango-theme ucs-utils undo-tree unicode-fonts)))
  '(show-paren-mode t)
  '(version-control t))
 (custom-set-faces
