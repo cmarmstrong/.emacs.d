@@ -13,6 +13,7 @@
 (add-to-list 'default-frame-alist '(font . "Input"))
 ;; (setq linum-format "%5d ") ;; fix linum fringe overlay
 (put 'dired-find-alternate-file 'disabled nil) ;; reuse dired buffer
+(setq scroll-error-top-bottom t)
 
 ;; CEDET
 (semantic-mode 1)
